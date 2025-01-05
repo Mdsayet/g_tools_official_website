@@ -14,6 +14,15 @@ function startTimer() {
     let timerInterval = setInterval(function() {
         timerElement.innerText = countdown;
         countdown--;
+        
+        // Change timer color every second
+        if (countdown > 6) {
+            timerElement.style.color = "#FF5722"; // Red color for >6 seconds
+        } else if (countdown > 3) {
+            timerElement.style.color = "#FF9800"; // Orange color for >3 seconds
+        } else {
+            timerElement.style.color = "#4CAF50"; // Green color for <=3 seconds
+        }
 
         if (countdown < 0) {
             clearInterval(timerInterval);
