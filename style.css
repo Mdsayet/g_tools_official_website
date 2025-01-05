@@ -9,6 +9,7 @@ body {
     background-color: #f0f8ff;
 }
 
+/* Popup Modal */
 .popup {
     display: flex;
     position: fixed;
@@ -19,25 +20,27 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
+    animation: fadeInPopup 0.5s ease-in-out;
 }
 
+/* Popup Content */
 .popup-content {
     background-color: #fff;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    width: 350px;
+    width: 380px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     color: #333;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: slideIn 0.5s ease-in-out;
 }
 
 h2 {
     color: #4CAF50;
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 26px;
+    margin-bottom: 15px;
 }
 
 ul {
@@ -47,28 +50,34 @@ ul {
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 button {
-    padding: 12px 20px;
-    margin: 10px;
+    padding: 15px 25px;
+    margin: 15px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #4CAF50;
     color: white;
-    border-radius: 8px;
-    opacity: 0.5;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 180px;
+    height: 50px;
 }
 
 button:enabled {
     opacity: 1;
 }
 
+button:disabled {
+    opacity: 0.5;
+}
+
 button:hover {
     background-color: #45a049;
+    transform: scale(1.05);
 }
 
 #timer {
@@ -80,18 +89,28 @@ button:hover {
     padding: 25px;
     width: 100px;
     height: 100px;
-    margin: 20px auto;
     line-height: 50px;
+    margin: 20px auto;
     animation: pulse 1s ease-in-out infinite;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
+/* Fade-in effect for the popup */
+@keyframes fadeInPopup {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+/* Slide-in animation for popup content */
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 
