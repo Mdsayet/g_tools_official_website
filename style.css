@@ -27,13 +27,15 @@ body {
 .popup-content {
     background-color: #fff;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
     width: 380px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     color: #333;
     font-size: 18px;
     line-height: 1.8;
+    position: relative;
+    border: 3px solid #4CAF50; /* Stylish border */
     animation: slideIn 0.5s ease-in-out;
 }
 
@@ -62,16 +64,16 @@ li {
 
 /* Action Buttons */
 .action-button {
-    padding: 15px 25px;
+    padding: 12px 20px;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #4CAF50;
     color: white;
-    border-radius: 50px;
+    border-radius: 8px; /* Reduced radius */
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 180px;
-    height: 50px;
+    width: 160px; /* Smaller width */
+    height: 45px; /* Smaller height */
 }
 
 .action-button:enabled {
