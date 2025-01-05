@@ -80,7 +80,8 @@ button:hover {
     transform: scale(1.05);
 }
 
-#timer {
+/* Timer Circle */
+.timer-circle {
     font-size: 50px;
     font-weight: bold;
     color: #FF5722;
@@ -91,7 +92,7 @@ button:hover {
     height: 100px;
     line-height: 50px;
     margin: 20px auto;
-    animation: pulse 1s ease-in-out infinite;
+    animation: timerExpand 1s linear infinite;
 }
 
 /* Fade-in effect for the popup */
@@ -114,13 +115,13 @@ button:hover {
     }
 }
 
-/* Pulse animation for timer */
-@keyframes pulse {
+/* Expanding circle animation for timer */
+@keyframes timerExpand {
     0% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
     100% {
         transform: scale(1);
